@@ -7,5 +7,11 @@ pipeline{
                 git branch: 'main', url: 'generated pipeline script'
             }
         }
+
+        stage('UNIT TESTING'){
+            steps{
+                sh 'mvn test'
+            }
+        }
     }
 }
